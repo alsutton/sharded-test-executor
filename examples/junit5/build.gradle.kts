@@ -21,6 +21,7 @@ dependencies {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+    jvmArgs("-Djunit.jupiter.extensions.autodetection.enabled=true")
     this.testLogging {
         this.showStandardStreams = true;
     }
