@@ -20,7 +20,7 @@ ignore the tests in that class.
 
 The Pseudo-code for this is;
 
-```java
+```
 int shardCount = 10; // Number of machines tests are running over
 int thisShard = 2; // The shard for this machine;  0 <= thisShard < shardCount;
 
@@ -29,3 +29,12 @@ if (targetShard == thisShard) {
     runTest();
 }
 ```
+
+## Bridges to test frameworks
+
+### JUnit 5
+
+You can use JUnit 5's [Automatic Extension Registration](https://junit.org/junit5/docs/current/user-guide/#extensions-registration-automatic) to enable
+the sharding system for all tests. This is the mechanism used in the [JUnit 5 example](https://github.com/alsutton/sharded-test-executor/tree/main/examples/junit5)
+provided.
+
