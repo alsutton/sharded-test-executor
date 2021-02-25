@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class TestExecutionPredicateTest {
+public class TestExecutionPredicateTests {
   private static final int TEST_CLASS_COUNT = 1000;
 
   private static final int TEST_SHARD_COUNT = 5;
