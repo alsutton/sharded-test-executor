@@ -7,7 +7,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@ExtendWith({ShardedTestExecutorExtension.class})
 public class DummyTestClass4 {
     @Test
     public void dummyTestMethod() {
