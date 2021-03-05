@@ -9,10 +9,10 @@ repositories {
     mavenCentral()
 }
 
-val junitVersion="5.7.0"
+val junitVersion="4.13.2"
 dependencies {
     implementation(project(":lib:core"))
-    implementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    implementation("junit:junit:${junitVersion}")
 
     errorprone("com.google.errorprone:error_prone_core:2.5.1")
 }

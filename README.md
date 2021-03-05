@@ -38,3 +38,10 @@ You can use JUnit 5's [Automatic Extension Registration](https://junit.org/junit
 the sharding system for all tests. This is the mechanism used in the [JUnit 5 example](https://github.com/alsutton/sharded-test-executor/tree/main/examples/junit5)
 provided.
 
+### JUnit 4/Robolectric
+
+JUnit4 is less extensible, so you will need to update your classes to say you want to use
+the sharded test runner as I've done in the [JUnit 4 example](https://github.com/alsutton/sharded-test-executor/tree/main/examples/junit4).
+
+If you wish to use this system with Robolectric you'll need to create a new runner which extends the existing 
+Robolectric one and update your `@RunWith` annotations to point to the new runner.
