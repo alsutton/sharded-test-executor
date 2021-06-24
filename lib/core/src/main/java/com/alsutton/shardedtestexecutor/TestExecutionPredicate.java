@@ -19,8 +19,8 @@ public class TestExecutionPredicate implements Predicate<String> {
 
     @Override
     public boolean test(String testClassName) {
-        int classHash = Math.abs(classHasher.hash(testClassName));
-        int targetShard = classHash % environment.getTotalShardCount();
+        int classHash = classHasher.hash(testClassName);
+        int targetShard = Integer.remainderUnsigned(classHash, environment.getTotalShardCount());
         return environment.getThisShardNumber() == targetShard;
     }
 }
